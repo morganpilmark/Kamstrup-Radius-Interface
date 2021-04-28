@@ -1,33 +1,17 @@
-# Kamstrup-Radius Interface
- ESP8266 interface for Kamstrup (Radius provided) electricity meter
-
-Very early development project. Barely begun.  
-Proof of concept Python3 script (Kamstrup reader.py). Reads serialport connected to meter, decrypts, parses and publishes result to mqtt.  
-Based on Python example provided by Radius.
+# Kamstrup-Radius to MQTT deamon
+Based on Python example provided by Radius and work by https://github.com/Asbjoern/
+Idea is a stable well behaved deamon for getting power usage data and more from the Kamstrup meter (model 486)
 
 ## Project contains:
-* Developing HAN module for the Radius provided Kamstrup Omnipower electricity meters
-* Develop case for fitting into HAN module.
-* Develop Arduino based software for a ESP8266 module. For receiving, decrypting and parsing push messages from meter.
-* Publish data to MQTT
+my-reader.py - daemon code
 
 ## Plan: 
-* Use relevant files from mbed TLS library https://tls.mbed.org/
-* Use modified mbusparser library from Jalla2000's norwegian project https://github.com/jalla2000/kamstrup-mqtt
-* Use Wifimanager library (or similar) to get captive portal and configuration
+ - Figure out the specifications for a well behaved UNIZ daemon and make the code behave in this way.
+ - Signals from the meter comes in burst every 10 seconds, figure out how to read data at the correct interval, every time.
+ - Do some logging
+ - Maybe make it into a docker container
 
 ## Tasks:
-- [x] Proof of concept Python prototype (Meter to MQTT)
-- [x] Get decryption working
-- [x] Get parser working
-- [x] Implement MQTT client
-- [x] Add persWifimanager configuration
-- [ ] Design power supply for limited current and voltage from meter. (Supercapacitor buffer?)
-- [x] Read serial port and connect to meter
-- [ ] Design PCB to specifications in *5512-2584_GB_A2_11-2019 OMNIPOWER HAN interface specification.pdf*
-- [ ] Implement functionality for status LED's on PCB
-- [ ] Design case for PCB to specifications in *5512-2584_GB_A2_11-2019 OMNIPOWER HAN interface specification.pdf*
-- [ ] Show current data on webpage incl. REST api to fetch data in JSON format
 
 
 Development in Develop branch. Working releases in master branch.
