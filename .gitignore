@@ -1,4 +1,6 @@
-
+__pycache__/
+nohup.out
+config.py
 pcb/_autosave-HANmodule.sch
 pcb/HANmodule-rescue.dcm
 pcb/HANmodule-rescue.lib
