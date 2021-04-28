@@ -13,5 +13,4 @@ my-reader.py - daemon code
 
 ## Tasks:
 
-
 Development in Develop branch. Working releases in master branch.
