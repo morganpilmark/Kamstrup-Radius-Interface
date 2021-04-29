@@ -12,6 +12,12 @@ my-reader.py - daemon code
  - Make different output modules (MQTT, file, DB?)
  - Maybe make it into a docker container
 
+## Setup
+create a config.py file with the following two lines (replace with your keys):
+encryption_key = bytes.fromhex('YOUR-ENCRYPTION-KEY')
+authentication_key = bytes.fromhex('YOUR-AUTH-KEY')
+
+
 ## Tasks:
 
 Development in Develop branch. Working releases in master branch.
