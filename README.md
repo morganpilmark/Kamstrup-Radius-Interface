@@ -14,7 +14,9 @@ my-reader.py - daemon code
 
 ## Setup
 create a config.py file with the following two lines (replace with your keys):
+
 encryption_key = bytes.fromhex('YOUR-ENCRYPTION-KEY')
+
 authentication_key = bytes.fromhex('YOUR-AUTH-KEY')
 
 
