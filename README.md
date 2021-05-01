@@ -9,7 +9,16 @@ my-reader.py - daemon code
  - Figure out the specifications for a well behaved UNIZ daemon and make the code behave in this way.
  - Signals from the meter comes in burst every 10 seconds, figure out how to read data at the correct interval, every time.
  - Do some logging
+ - Make different output modules (MQTT, file, DB?)
  - Maybe make it into a docker container
+
+## Setup
+create a config.py file with the following two lines (replace with your keys):
+
+encryption_key = bytes.fromhex('YOUR-ENCRYPTION-KEY')
+
+authentication_key = bytes.fromhex('YOUR-AUTH-KEY')
+
 
 ## Tasks:
 
