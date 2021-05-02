@@ -20,6 +20,5 @@ encryption_key = bytes.fromhex('YOUR-ENCRYPTION-KEY')
 authentication_key = bytes.fromhex('YOUR-AUTH-KEY')
 
 
-## Tasks:
-
-Development in Develop branch. Working releases in master branch.
+## Todo:
+Catch errors if MQTT server connection fails on cennect or later.
